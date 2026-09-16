@@ -5,6 +5,7 @@ import '../providers/app_settings.dart';
 import '../widgets/dashboard_card.dart';
 import 'activity_one_screen.dart';
 import 'activity_two_screen.dart';
+import 'network_monitor_screen.dart';
 import 'settings_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -20,6 +21,7 @@ class HomeScreen extends StatelessWidget {
       DashboardCard(title: 'Sample Check-in', description: 'Log and track incoming specimens.', icon: Icons.biotech_outlined, color: Colors.teal, onTap: () => Navigator.pushNamed(context, ActivityOneScreen.routeName)),
       DashboardCard(title: 'Results Review', description: 'Review the latest analysis results.', icon: Icons.analytics_outlined, color: Colors.deepOrange, onTap: () => Navigator.pushNamed(context, ActivityTwoScreen.routeName)),
       DashboardCard(title: 'Settings', description: 'Personalize your workspace.', icon: Icons.tune_outlined, color: Colors.indigo, onTap: () => Navigator.pushNamed(context, SettingsScreen.routeName)),
+      DashboardCard(title: 'Network Monitor', description: 'Monitor handovers and recover queued requests.', icon: Icons.network_check_outlined, color: Colors.blue, onTap: () => Navigator.pushNamed(context, NetworkMonitorScreen.routeName)),
     ];
     return Scaffold(
       appBar: AppBar(title: const Text('Lab Dashboard'), actions: [IconButton(tooltip: 'Settings', onPressed: () => Navigator.pushNamed(context, SettingsScreen.routeName), icon: const Icon(Icons.settings_outlined))]),
