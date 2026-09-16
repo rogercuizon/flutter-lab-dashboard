@@ -5,6 +5,7 @@ import 'providers/app_settings.dart';
 import 'screens/activity_one_screen.dart';
 import 'screens/activity_two_screen.dart';
 import 'screens/home_screen.dart';
+import 'screens/network_monitor_screen.dart';
 import 'screens/settings_screen.dart';
 
 void main() => runApp(ChangeNotifierProvider(create: (_) => AppSettings(), child: const LaboratoryApp()));
@@ -27,6 +28,7 @@ class LaboratoryApp extends StatelessWidget {
         ActivityOneScreen.routeName: (_) => const ActivityOneScreen(),
         ActivityTwoScreen.routeName: (_) => const ActivityTwoScreen(),
         SettingsScreen.routeName: (_) => const SettingsScreen(),
+        NetworkMonitorScreen.routeName: (_) => const NetworkMonitorScreen(),
       },
     );
   }
